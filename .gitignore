@@ -1,0 +1,8 @@
+*.mod*
+*.ko*
+*.o*
+.project
+.cproject
+*.xml
+Module*
+module*
