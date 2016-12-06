@@ -12,21 +12,10 @@
 #include <linux/netlink.h>
 #include <linux/skbuff.h>
 #include <linux/delay.h>
+#include "useless_nl_config.h"
 #define KM_AUTHOR "Egor Dudyak"
 #define KM_DESC   "Provides connection between UselesDBd and UselessDBClients"
 #define LOG_PREFIX	"UselessDB module: "
-
-#define NETLINK_USELESS_P 		31
-#define MSGTYPE_SET_DPID		11
-#define MSGTYPE_REQEUEST_START	20
-#define MSGTYPE_REQEUEST_END	40
-#define MSGTYPE_RESPONSE_START	50
-#define MSGTYPE_RESPONSE_END	70
-
-#define ERROR_NO					0
-#define ERROR_WRONG_MSG_TYPE		1
-#define ERROR_DAEMON_UNREACHABLE	2
-#define ERROR_TRANSFER_FAILED		3
 
 static int daemon_pid=0;
 struct sock *nl_sk = NULL;
