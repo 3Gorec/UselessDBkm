@@ -82,7 +82,7 @@ static void transfer_msg_to_daemon(struct nlmsghdr *nlh){
 	if(daemon_pid!=0){
 		char *payload_buf=kmalloc(new_msg_size,GFP_KERNEL);
 		inject_client_pid_to_msg(client_pid,nlh,payload_buf);
-		ret=send_nl_msg(client_pid,nlh->nlmsg_type,payload_buf,new_msg_size);
+		ret=send_nl_msg(daemon_pid,nlh->nlmsg_type,payload_buf,new_msg_size);
 		kfree(payload_buf);
 		if(ret!=0){
 			printk(KERN_INFO LOG_PREFIX"Error while transferring msg from pid %d to daemon\n",nlh->nlmsg_pid);
