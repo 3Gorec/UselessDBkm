@@ -12,7 +12,7 @@
 #include <linux/netlink.h>
 #include <linux/skbuff.h>
 #include <linux/delay.h>
-#include "useless_nl_config.h"
+#include "useless_nl_core/useless_nl_config.h"
 #define KM_AUTHOR "Egor Dudyak"
 #define KM_DESC   "Provides connection between UselesDBd and UselessDBClients"
 #define LOG_PREFIX	"UselessDB module: "

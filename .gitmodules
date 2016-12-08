@@ -1,0 +1,3 @@
+[submodule "useless_nl_core"]
+	path = useless_nl_core
+	url = git@github.com:3Gorec/useless_nl_core.git
